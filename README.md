@@ -1,3 +1,77 @@
+# React Weather Dashboard
+
+A modern, responsive Weather Dashboard built with **React.js**, **TanStack React Query**, **Supabase**, and **OpenWeatherMap API**. This app allows users to:
+
+- Search for any city to view current weather and air quality.
+- Automatically detect current location on first visit.
+- Save preferred city to Supabase (if logged in).
+- Switch between Celsius and Fahrenheit.
+- View real-time updates with API polling every 30 seconds.
+
+---
+
+## Features
+
+### 🔍 Search & Weather
+- Search by city and get:
+  - Temperature
+  - Humidity
+  - Wind speed
+  - Weather condition (e.g., cloudy, sunny)
+  - Weather icon
+- View 5-day forecast 
+
+###  Air Quality
+- Displays Air Quality Index (AQI) fetched from OpenWeatherMap Air Pollution API
+
+###  Auto-location
+- On first load, app uses browser geolocation to detect and fetch weather for the user's current city
+
+### Supabase Integration
+- User authentication (Sign in / Sign up)
+- Saves last searched city per user
+- Fetches city from Supabase on login
+
+###  Tech Stack
+
+- **React.js** (Functional Components + Hooks)
+- **TypeScript** (Type Safety)
+- **Vite** (Project setup)
+- **React Query** (API calls, caching, polling)
+- **Framer Motion** (UI Animations)
+- **Supabase** (Auth + Database)
+- **Tailwind CSS** (Responsive styling)
+- **OpenWeatherMap API** (Weather + Air Quality)
+
+---
+
+## 🧠 Architecture
+
+### 🔧 State Management
+- Uses **React Context API** to manage global state:
+  - Current city
+  - Temperature unit (°C / °F)
+  - User object from Supabase
+## Environment Setup
+
+### 1. Clone the Repo
+
+```bash
+git clone https://github.com/shwetkamal-gaud/weather-dashboard.git
+cd weather-dashboard
+```
+ ### 2. Install the Dependencies
+
+ ```bash
+npm install
+```
+
+### 3. Run the Server
+
+```bash
+npm run dev
+```
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
