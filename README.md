@@ -12,7 +12,7 @@ A modern, responsive Weather Dashboard built with **React.js**, **TanStack React
 
 ## Features
 
-### 🔍 Search & Weather
+### Search & Weather
 - Search by city and get:
   - Temperature
   - Humidity
@@ -45,9 +45,9 @@ A modern, responsive Weather Dashboard built with **React.js**, **TanStack React
 
 ---
 
-## 🧠 Architecture
+##  Architecture
 
-### 🔧 State Management
+###  State Management
 - Uses **React Context API** to manage global state:
   - Current city
   - Temperature unit (°C / °F)
