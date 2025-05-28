@@ -1,5 +1,5 @@
 # React Weather Dashboard
-![Weather Dashboard Screenshot](./Weather.png)
+![Weather Dashboard Screenshot](/Weather.png)
 
 A modern, responsive Weather Dashboard built with **React.js**, **TanStack React Query**, **Supabase**, and **OpenWeatherMap API**. This app allows users to:
 
