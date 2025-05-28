@@ -65,8 +65,14 @@ cd weather-dashboard
  ```bash
 npm install
 ```
+### 3 Create .env file with following values
+```bash
+VITE_WEATHER_API_KEY=your-weather-api-key
 
-### 3. Run the Server
+VITE_SUPABASE_URL=Your-Supabase-Site-Url
+VITE_SUPABASE_ANON_KEY=Your-Anon-Key
+```
+### 4. Run the Server
 
 ```bash
 npm run dev
