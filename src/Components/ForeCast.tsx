@@ -1,5 +1,6 @@
 import { useWeatherContext } from '../context/WeatherContext';
 import { useForecast } from '../hooks/useForecast';
+import { motion } from "framer-motion";
 
 const ForeCast = () => {
     const { city } = useWeatherContext();
@@ -9,7 +10,9 @@ const ForeCast = () => {
     if (error) return <p>Error loading forecast.</p>
     const dailyData = data.list.filter((reading: any) => reading.dt_txt.includes("12:00:00"));
   return (
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mt-6 dark:bg-black/20 bg-zinc-300/20 rounded-2xl backdrop-blur-[32px] p-6">
+      <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }} className="grid grid-cols-1 md:grid-cols-5 gap-4 mt-6 dark:bg-black/20 bg-zinc-300/20 rounded-2xl backdrop-blur-[32px] p-6">
           {dailyData.map((day: any, idx: number) => (
               <div key={idx} className="p-4 bg-white/20 backdrop-blur-md rounded shadow text-center">
                   <h3 className="font-bold">{new Date(day.dt_txt).toISOString()}</h3>
@@ -22,7 +25,7 @@ const ForeCast = () => {
                   <p>{Math.round(day.main.temp)}°C</p>
               </div>
           ))}
-      </div>
+      </motion.div>
   )
 }
 

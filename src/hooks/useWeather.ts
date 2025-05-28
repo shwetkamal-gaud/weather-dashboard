@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useWeatherContext } from "../context/WeatherContext";
 
-const API_KEY = "967165840376f2d1730f647188fb9d76";
+const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
 const fetchWeather = async (city: string, unit: string) => {
     const res = await axios.get("https://api.openweathermap.org/data/2.5/weather", {

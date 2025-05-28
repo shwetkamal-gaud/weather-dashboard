@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 
-const API_KEY = "967165840376f2d1730f647188fb9d76"; 
+const API_KEY = import.meta.env.VITE_WEATHER_API_KEY; 
 
 const fetchForecast = async (city: string) => {
     const res = await fetch(
